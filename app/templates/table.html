@@ -1,0 +1,17 @@
+<table>
+
+    <thead style='background: #184662;color: #fff;font-size: 18px;'>
+        <tr>
+            <td style='width:150px;'>First name</td>
+            <td style='width:150px;'>Last name</td>
+            <td style='width:150px;'>Email</td>
+        </tr>
+    </thead>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.fname }}</td>
+        <td>{{ user.lname }}</td>
+        <td>{{ user.email }}</td>
+    </tr>
+    {% endfor %}
+</table>

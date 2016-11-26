@@ -1,0 +1,51 @@
+* {
+  font-family: 'Oxygen', sans-serif;
+}
+
+form {
+  width: 95%;
+  margin: 5px auto;
+  padding: 10px;
+}
+
+fieldset {
+  border: 3px solid #184662;
+  background: #ddd;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+legend {
+  background: #184662;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 18px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#placeholder>div {
+  padding: 6px;
+}
+
+#placeholder>div>div {
+  display: inline-block
+  margin-right: 20px;
+  padding: 30px;
+}
+
+input[type=submit],
+button {
+  padding: 5px 10px;
+  background: #184662;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#submit {
+  margin: 10px;
+}

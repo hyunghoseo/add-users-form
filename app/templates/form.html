@@ -1,0 +1,33 @@
+{% block content %}
+<link href="{{ url_for('static',filename='styles/main.css') }}" rel="stylesheet" />
+<script src="{{ url_for('static',filename='javascript/adduser.js') }}"></script>
+
+<form name="form" id="form" autocomplete="off" method="post">
+    {{ form.hidden_tag() }}
+    <fieldset>
+        <legend>Add Users</legend>
+        <div id="placeholder">
+            <div id="line1">
+                First name: {{ form.fname(size=18) }} Last name: {{ form.lname(size=18) }} Email: {{ form.email(size=18) }}
+
+
+                <button type="submit" title="Add another user.">+</button>
+            </div>
+
+        </div>
+        <div>
+            {% with messages = get_flashed_messages() %} {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }} </li>
+                {% endfor %}
+            </ul>
+            {% endif %} {% endwith %}
+        </div>
+</form>
+<form action="{{ url_for('table') }}">
+    <input type="submit" value="Submit" />
+</form>
+</fieldset>
+</body>
+{% endblock %}
